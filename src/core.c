@@ -47,7 +47,7 @@ FREENECTAPI int freenect_init(freenect_context **ctx, freenect_usb_context *usb_
 
 	memset(*ctx, 0, sizeof(freenect_context));
 
-	(*ctx)->log_level = LL_WARNING;
+	(*ctx)->log_level = LL_DEBUG;
 	(*ctx)->enabled_subdevices = (freenect_device_flags)(FREENECT_DEVICE_MOTOR | FREENECT_DEVICE_CAMERA);
 	res = fnusb_init(&(*ctx)->usb, usb_ctx);
 	if (res < 0) {
